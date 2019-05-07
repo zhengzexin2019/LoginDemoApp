@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btn_login = findViewById(R.id.btn_login);
+        Button btn_login = findViewById(R.id.loginbtn);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                            Intent intent=new Intent();
-                            intent.setClass(MainActivity.this, Activity_Login.class);
+                            Intent intent = new Intent();
+                            intent.setClass(MainActivity.this, LoginActivity.class);
                             startActivity(intent);
                         }
                     });
